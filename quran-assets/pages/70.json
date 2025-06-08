@@ -1,0 +1,933 @@
+{
+  "hizb": 7,
+  "juz": 4,
+  "pageNumber": 70,
+  "rub": 28,
+  "surahs": [
+    {
+      "surahNum": 3,
+      "ayahs": [
+        {
+          "ayahNum": 154,
+          "words": [
+            {
+              "code": "ﭑ",
+              "text": "ثُمَّ",
+              "indopak": "ثُمَّ",
+              "lineNumber": 1
+            },
+            {
+              "code": "ﭒ",
+              "text": "أَنزَلَ",
+              "indopak": "اَنۡزَلَ",
+              "lineNumber": 1
+            },
+            {
+              "code": "ﭓ",
+              "text": "عَلَيْكُم",
+              "indopak": "عَلَيۡكُمۡ",
+              "lineNumber": 1
+            },
+            {
+              "code": "ﭔ",
+              "text": "مِّنۢ",
+              "indopak": "مِّنۡۢ",
+              "lineNumber": 1
+            },
+            {
+              "code": "ﭕ",
+              "text": "بَعْدِ",
+              "indopak": "بَعۡدِ",
+              "lineNumber": 1
+            },
+            {
+              "code": "ﭖ",
+              "text": "ٱلْغَمِّ",
+              "indopak": "الۡغَمِّ",
+              "lineNumber": 1
+            },
+            {
+              "code": "ﭗ",
+              "text": "أَمَنَةًۭ",
+              "indopak": "اَمَنَةً",
+              "lineNumber": 1
+            },
+            {
+              "code": "ﭘ",
+              "text": "نُّعَاسًۭا",
+              "indopak": "نُّعَاسًا",
+              "lineNumber": 1
+            },
+            {
+              "code": "ﭙ",
+              "text": "يَغْشَىٰ",
+              "indopak": "يَّغۡشٰى",
+              "lineNumber": 1
+            },
+            {
+              "code": "ﭚ",
+              "text": "طَآئِفَةًۭ",
+              "indopak": "طَآٮِٕفَةً",
+              "lineNumber": 1
+            },
+            {
+              "code": "ﭛﭜ",
+              "text": "مِّنكُمْ ۖ",
+              "indopak": "مِّنۡكُمۡ​ۙ",
+              "lineNumber": 2
+            },
+            {
+              "code": "ﭝ",
+              "text": "وَطَآئِفَةٌۭ",
+              "indopak": "وَطَآٮِٕفَةٌ",
+              "lineNumber": 2
+            },
+            {
+              "code": "ﭞ",
+              "text": "قَدْ",
+              "indopak": "قَدۡ",
+              "lineNumber": 2
+            },
+            {
+              "code": "ﭟ",
+              "text": "أَهَمَّتْهُمْ",
+              "indopak": "اَهَمَّتۡهُمۡ",
+              "lineNumber": 2
+            },
+            {
+              "code": "ﭠ",
+              "text": "أَنفُسُهُمْ",
+              "indopak": "اَنۡفُسُهُمۡ",
+              "lineNumber": 2
+            },
+            {
+              "code": "ﭡ",
+              "text": "يَظُنُّونَ",
+              "indopak": "يَظُنُّوۡنَ",
+              "lineNumber": 2
+            },
+            {
+              "code": "ﭢ",
+              "text": "بِٱللَّهِ",
+              "indopak": "بِاللّٰهِ",
+              "lineNumber": 2
+            },
+            {
+              "code": "ﭣ",
+              "text": "غَيْرَ",
+              "indopak": "غَيۡرَ",
+              "lineNumber": 2
+            },
+            {
+              "code": "ﭤ",
+              "text": "ٱلْحَقِّ",
+              "indopak": "الۡحَـقِّ",
+              "lineNumber": 3
+            },
+            {
+              "code": "ﭥ",
+              "text": "ظَنَّ",
+              "indopak": "ظَنَّ",
+              "lineNumber": 3
+            },
+            {
+              "code": "ﭦﭧ",
+              "text": "ٱلْجَـٰهِلِيَّةِ ۖ",
+              "indopak": "الۡجَـاهِلِيَّةِ​ؕ",
+              "lineNumber": 3
+            },
+            {
+              "code": "ﭨ",
+              "text": "يَقُولُونَ",
+              "indopak": "يَقُوۡلُوۡنَ",
+              "lineNumber": 3
+            },
+            {
+              "code": "ﭩ",
+              "text": "هَل",
+              "indopak": "هَلۡ",
+              "lineNumber": 3
+            },
+            {
+              "code": "ﭪ",
+              "text": "لَّنَا",
+              "indopak": "لَّنَا",
+              "lineNumber": 3
+            },
+            {
+              "code": "ﭫ",
+              "text": "مِنَ",
+              "indopak": "مِنَ",
+              "lineNumber": 3
+            },
+            {
+              "code": "ﭬ",
+              "text": "ٱلْأَمْرِ",
+              "indopak": "الۡاَمۡرِ",
+              "lineNumber": 3
+            },
+            {
+              "code": "ﭭ",
+              "text": "مِن",
+              "indopak": "مِنۡ",
+              "lineNumber": 3
+            },
+            {
+              "code": "ﭮﭯ",
+              "text": "شَىْءٍۢ ۗ",
+              "indopak": "شَىۡءٍ​ؕ",
+              "lineNumber": 3
+            },
+            {
+              "code": "ﭰ",
+              "text": "قُلْ",
+              "indopak": "قُلۡ",
+              "lineNumber": 4
+            },
+            {
+              "code": "ﭱ",
+              "text": "إِنَّ",
+              "indopak": "اِنَّ",
+              "lineNumber": 4
+            },
+            {
+              "code": "ﭲ",
+              "text": "ٱلْأَمْرَ",
+              "indopak": "الۡاَمۡرَ",
+              "lineNumber": 4
+            },
+            {
+              "code": "ﭳ",
+              "text": "كُلَّهُۥ",
+              "indopak": "كُلَّهٗ",
+              "lineNumber": 4
+            },
+            {
+              "code": "ﭴﭵ",
+              "text": "لِلَّهِ ۗ",
+              "indopak": "لِلّٰهِ​ؕ",
+              "lineNumber": 4
+            },
+            {
+              "code": "ﭶ",
+              "text": "يُخْفُونَ",
+              "indopak": "يُخۡفُوۡنَ",
+              "lineNumber": 4
+            },
+            {
+              "code": "ﭷ",
+              "text": "فِىٓ",
+              "indopak": "فِىۡۤ",
+              "lineNumber": 4
+            },
+            {
+              "code": "ﭸ",
+              "text": "أَنفُسِهِم",
+              "indopak": "اَنۡفُسِهِمۡ",
+              "lineNumber": 4
+            },
+            {
+              "code": "ﭹ",
+              "text": "مَّا",
+              "indopak": "مَّا",
+              "lineNumber": 4
+            },
+            {
+              "code": "ﭺ",
+              "text": "لَا",
+              "indopak": "لَا",
+              "lineNumber": 4
+            },
+            {
+              "code": "ﭻ",
+              "text": "يُبْدُونَ",
+              "indopak": "يُبۡدُوۡنَ",
+              "lineNumber": 4
+            },
+            {
+              "code": "ﭼﭽ",
+              "text": "لَكَ ۖ",
+              "indopak": "لَكَ​ؕ",
+              "lineNumber": 4
+            },
+            {
+              "code": "ﭾ",
+              "text": "يَقُولُونَ",
+              "indopak": "يَقُوۡلُوۡنَ",
+              "lineNumber": 5
+            },
+            {
+              "code": "ﭿ",
+              "text": "لَوْ",
+              "indopak": "لَوۡ",
+              "lineNumber": 5
+            },
+            {
+              "code": "ﮀ",
+              "text": "كَانَ",
+              "indopak": "كَانَ",
+              "lineNumber": 5
+            },
+            {
+              "code": "ﮁ",
+              "text": "لَنَا",
+              "indopak": "لَنَا",
+              "lineNumber": 5
+            },
+            {
+              "code": "ﮂ",
+              "text": "مِنَ",
+              "indopak": "مِنَ",
+              "lineNumber": 5
+            },
+            {
+              "code": "ﮃ",
+              "text": "ٱلْأَمْرِ",
+              "indopak": "الۡاَمۡرِ",
+              "lineNumber": 5
+            },
+            {
+              "code": "ﮄ",
+              "text": "شَىْءٌۭ",
+              "indopak": "شَىۡءٌ",
+              "lineNumber": 5
+            },
+            {
+              "code": "ﮅ",
+              "text": "مَّا",
+              "indopak": "مَّا",
+              "lineNumber": 5
+            },
+            {
+              "code": "ﮆ",
+              "text": "قُتِلْنَا",
+              "indopak": "قُتِلۡنَا",
+              "lineNumber": 5
+            },
+            {
+              "code": "ﮇﮈ",
+              "text": "هَـٰهُنَا ۗ",
+              "indopak": "هٰهُنَا ​ؕ",
+              "lineNumber": 5
+            },
+            {
+              "code": "ﮉ",
+              "text": "قُل",
+              "indopak": "قُلۡ",
+              "lineNumber": 5
+            },
+            {
+              "code": "ﮊ",
+              "text": "لَّوْ",
+              "indopak": "لَّوۡ",
+              "lineNumber": 5
+            },
+            {
+              "code": "ﮋ",
+              "text": "كُنتُمْ",
+              "indopak": "كُنۡتُمۡ",
+              "lineNumber": 5
+            },
+            {
+              "code": "ﮌ",
+              "text": "فِى",
+              "indopak": "فِىۡ",
+              "lineNumber": 6
+            },
+            {
+              "code": "ﮍ",
+              "text": "بُيُوتِكُمْ",
+              "indopak": "بُيُوۡتِكُمۡ",
+              "lineNumber": 6
+            },
+            {
+              "code": "ﮎ",
+              "text": "لَبَرَزَ",
+              "indopak": "لَبَرَزَ",
+              "lineNumber": 6
+            },
+            {
+              "code": "ﮏ",
+              "text": "ٱلَّذِينَ",
+              "indopak": "الَّذِيۡنَ",
+              "lineNumber": 6
+            },
+            {
+              "code": "ﮐ",
+              "text": "كُتِبَ",
+              "indopak": "كُتِبَ",
+              "lineNumber": 6
+            },
+            {
+              "code": "ﮑ",
+              "text": "عَلَيْهِمُ",
+              "indopak": "عَلَيۡهِمُ",
+              "lineNumber": 6
+            },
+            {
+              "code": "ﮒ",
+              "text": "ٱلْقَتْلُ",
+              "indopak": "الۡقَتۡلُ",
+              "lineNumber": 6
+            },
+            {
+              "code": "ﮓ",
+              "text": "إِلَىٰ",
+              "indopak": "اِلٰى",
+              "lineNumber": 6
+            },
+            {
+              "code": "ﮔﮕ",
+              "text": "مَضَاجِعِهِمْ ۖ",
+              "indopak": "مَضَاجِعِهِمۡ​ۚ",
+              "lineNumber": 6
+            },
+            {
+              "code": "ﮖ",
+              "text": "وَلِيَبْتَلِىَ",
+              "indopak": "وَلِيَبۡتَلِىَ",
+              "lineNumber": 7
+            },
+            {
+              "code": "ﮗ",
+              "text": "ٱللَّهُ",
+              "indopak": "اللّٰهُ",
+              "lineNumber": 7
+            },
+            {
+              "code": "ﮘ",
+              "text": "مَا",
+              "indopak": "مَا",
+              "lineNumber": 7
+            },
+            {
+              "code": "ﮙ",
+              "text": "فِى",
+              "indopak": "فِىۡ",
+              "lineNumber": 7
+            },
+            {
+              "code": "ﮚ",
+              "text": "صُدُورِكُمْ",
+              "indopak": "صُدُوۡرِكُمۡ",
+              "lineNumber": 7
+            },
+            {
+              "code": "ﮛ",
+              "text": "وَلِيُمَحِّصَ",
+              "indopak": "وَلِيُمَحِّصَ",
+              "lineNumber": 7
+            },
+            {
+              "code": "ﮜ",
+              "text": "مَا",
+              "indopak": "مَا",
+              "lineNumber": 7
+            },
+            {
+              "code": "ﮝ",
+              "text": "فِى",
+              "indopak": "فِىۡ",
+              "lineNumber": 7
+            },
+            {
+              "code": "ﮞﮟ",
+              "text": "قُلُوبِكُمْ ۗ",
+              "indopak": "قُلُوۡبِكُمۡ​ؕ",
+              "lineNumber": 7
+            },
+            {
+              "code": "ﮠ",
+              "text": "وَٱللَّهُ",
+              "indopak": "وَاللّٰهُ",
+              "lineNumber": 8
+            },
+            {
+              "code": "ﮡ",
+              "text": "عَلِيمٌۢ",
+              "indopak": "عَلِيۡمٌۢ",
+              "lineNumber": 8
+            },
+            {
+              "code": "ﮢ",
+              "text": "بِذَاتِ",
+              "indopak": "بِذَاتِ",
+              "lineNumber": 8
+            },
+            {
+              "code": "ﮣ",
+              "text": "ٱلصُّدُورِ",
+              "indopak": "الصُّدُوۡرِ‏",
+              "lineNumber": 8
+            },
+            {
+              "code": "ﮤ",
+              "text": null,
+              "indopak": "١٥٤",
+              "lineNumber": 8
+            }
+          ]
+        },
+        {
+          "ayahNum": 155,
+          "words": [
+            {
+              "code": "ﮥ",
+              "text": "إِنَّ",
+              "indopak": "اِنَّ",
+              "lineNumber": 8
+            },
+            {
+              "code": "ﮦ",
+              "text": "ٱلَّذِينَ",
+              "indopak": "الَّذِيۡنَ",
+              "lineNumber": 8
+            },
+            {
+              "code": "ﮧ",
+              "text": "تَوَلَّوْا۟",
+              "indopak": "تَوَلَّوۡا",
+              "lineNumber": 8
+            },
+            {
+              "code": "ﮨ",
+              "text": "مِنكُمْ",
+              "indopak": "مِنۡكُمۡ",
+              "lineNumber": 8
+            },
+            {
+              "code": "ﮩ",
+              "text": "يَوْمَ",
+              "indopak": "يَوۡمَ",
+              "lineNumber": 9
+            },
+            {
+              "code": "ﮪ",
+              "text": "ٱلْتَقَى",
+              "indopak": "الۡتَقَى",
+              "lineNumber": 9
+            },
+            {
+              "code": "ﮫ",
+              "text": "ٱلْجَمْعَانِ",
+              "indopak": "الۡجَمۡعٰنِۙ",
+              "lineNumber": 9
+            },
+            {
+              "code": "ﮬ",
+              "text": "إِنَّمَا",
+              "indopak": "اِنَّمَا",
+              "lineNumber": 9
+            },
+            {
+              "code": "ﮭ",
+              "text": "ٱسْتَزَلَّهُمُ",
+              "indopak": "اسۡتَزَلَّهُمُ",
+              "lineNumber": 9
+            },
+            {
+              "code": "ﮮ",
+              "text": "ٱلشَّيْطَـٰنُ",
+              "indopak": "الشَّيۡطٰنُ",
+              "lineNumber": 9
+            },
+            {
+              "code": "ﮯ",
+              "text": "بِبَعْضِ",
+              "indopak": "بِبَعۡضِ",
+              "lineNumber": 9
+            },
+            {
+              "code": "ﮰ",
+              "text": "مَا",
+              "indopak": "مَا",
+              "lineNumber": 9
+            },
+            {
+              "code": "ﮱﯓ",
+              "text": "كَسَبُوا۟ ۖ",
+              "indopak": "كَسَبُوۡا ​ۚ",
+              "lineNumber": 10
+            },
+            {
+              "code": "ﯔ",
+              "text": "وَلَقَدْ",
+              "indopak": "وَلَقَدۡ",
+              "lineNumber": 10
+            },
+            {
+              "code": "ﯕ",
+              "text": "عَفَا",
+              "indopak": "عَفَا",
+              "lineNumber": 10
+            },
+            {
+              "code": "ﯖ",
+              "text": "ٱللَّهُ",
+              "indopak": "اللّٰهُ",
+              "lineNumber": 10
+            },
+            {
+              "code": "ﯗﯘ",
+              "text": "عَنْهُمْ ۗ",
+              "indopak": "عَنۡهُمۡ​ؕ",
+              "lineNumber": 10
+            },
+            {
+              "code": "ﯙ",
+              "text": "إِنَّ",
+              "indopak": "اِنَّ",
+              "lineNumber": 10
+            },
+            {
+              "code": "ﯚ",
+              "text": "ٱللَّهَ",
+              "indopak": "اللّٰهَ",
+              "lineNumber": 10
+            },
+            {
+              "code": "ﯛ",
+              "text": "غَفُورٌ",
+              "indopak": "غَفُوۡرٌ",
+              "lineNumber": 10
+            },
+            {
+              "code": "ﯜ",
+              "text": "حَلِيمٌۭ",
+              "indopak": "حَلِيۡمٌ‏",
+              "lineNumber": 10
+            },
+            {
+              "code": "ﯝ",
+              "text": null,
+              "indopak": "١٥٥",
+              "lineNumber": 10
+            }
+          ]
+        },
+        {
+          "ayahNum": 156,
+          "words": [
+            {
+              "code": "ﯞ",
+              "text": "يَـٰٓأَيُّهَا",
+              "indopak": "يٰۤـاَيُّهَا",
+              "lineNumber": 10
+            },
+            {
+              "code": "ﯟ",
+              "text": "ٱلَّذِينَ",
+              "indopak": "الَّذِيۡنَ",
+              "lineNumber": 11
+            },
+            {
+              "code": "ﯠ",
+              "text": "ءَامَنُوا۟",
+              "indopak": "اٰمَنُوۡا",
+              "lineNumber": 11
+            },
+            {
+              "code": "ﯡ",
+              "text": "لَا",
+              "indopak": "لَا",
+              "lineNumber": 11
+            },
+            {
+              "code": "ﯢ",
+              "text": "تَكُونُوا۟",
+              "indopak": "تَكُوۡنُوۡا",
+              "lineNumber": 11
+            },
+            {
+              "code": "ﯣ",
+              "text": "كَٱلَّذِينَ",
+              "indopak": "كَالَّذِيۡنَ",
+              "lineNumber": 11
+            },
+            {
+              "code": "ﯤ",
+              "text": "كَفَرُوا۟",
+              "indopak": "كَفَرُوۡا",
+              "lineNumber": 11
+            },
+            {
+              "code": "ﯥ",
+              "text": "وَقَالُوا۟",
+              "indopak": "وَقَالُوۡا",
+              "lineNumber": 11
+            },
+            {
+              "code": "ﯦ",
+              "text": "لِإِخْوَٰنِهِمْ",
+              "indopak": "لِاِخۡوَانِهِمۡ",
+              "lineNumber": 11
+            },
+            {
+              "code": "ﯧ",
+              "text": "إِذَا",
+              "indopak": "اِذَا",
+              "lineNumber": 11
+            },
+            {
+              "code": "ﯨ",
+              "text": "ضَرَبُوا۟",
+              "indopak": "ضَرَبُوۡا",
+              "lineNumber": 12
+            },
+            {
+              "code": "ﯩ",
+              "text": "فِى",
+              "indopak": "فِى",
+              "lineNumber": 12
+            },
+            {
+              "code": "ﯪ",
+              "text": "ٱلْأَرْضِ",
+              "indopak": "الۡاَرۡضِ",
+              "lineNumber": 12
+            },
+            {
+              "code": "ﯫ",
+              "text": "أَوْ",
+              "indopak": "اَوۡ",
+              "lineNumber": 12
+            },
+            {
+              "code": "ﯬ",
+              "text": "كَانُوا۟",
+              "indopak": "كَانُوۡا",
+              "lineNumber": 12
+            },
+            {
+              "code": "ﯭ",
+              "text": "غُزًّۭى",
+              "indopak": "غُزًّى",
+              "lineNumber": 12
+            },
+            {
+              "code": "ﯮ",
+              "text": "لَّوْ",
+              "indopak": "لَّوۡ",
+              "lineNumber": 12
+            },
+            {
+              "code": "ﯯ",
+              "text": "كَانُوا۟",
+              "indopak": "كَانُوۡا",
+              "lineNumber": 12
+            },
+            {
+              "code": "ﯰ",
+              "text": "عِندَنَا",
+              "indopak": "عِنۡدَنَا",
+              "lineNumber": 12
+            },
+            {
+              "code": "ﯱ",
+              "text": "مَا",
+              "indopak": "مَا",
+              "lineNumber": 12
+            },
+            {
+              "code": "ﯲ",
+              "text": "مَاتُوا۟",
+              "indopak": "مَاتُوۡا",
+              "lineNumber": 12
+            },
+            {
+              "code": "ﯳ",
+              "text": "وَمَا",
+              "indopak": "وَمَا",
+              "lineNumber": 12
+            },
+            {
+              "code": "ﯴ",
+              "text": "قُتِلُوا۟",
+              "indopak": "قُتِلُوۡا ۚ",
+              "lineNumber": 13
+            },
+            {
+              "code": "ﯵ",
+              "text": "لِيَجْعَلَ",
+              "indopak": "لِيَجۡعَلَ",
+              "lineNumber": 13
+            },
+            {
+              "code": "ﯶ",
+              "text": "ٱللَّهُ",
+              "indopak": "اللّٰهُ",
+              "lineNumber": 13
+            },
+            {
+              "code": "ﯷ",
+              "text": "ذَٰلِكَ",
+              "indopak": "ذٰ لِكَ",
+              "lineNumber": 13
+            },
+            {
+              "code": "ﯸ",
+              "text": "حَسْرَةًۭ",
+              "indopak": "حَسۡرَةً",
+              "lineNumber": 13
+            },
+            {
+              "code": "ﯹ",
+              "text": "فِى",
+              "indopak": "فِىۡ",
+              "lineNumber": 13
+            },
+            {
+              "code": "ﯺﯻ",
+              "text": "قُلُوبِهِمْ ۗ",
+              "indopak": "قُلُوۡبِهِمۡ​ؕ",
+              "lineNumber": 13
+            },
+            {
+              "code": "ﯼ",
+              "text": "وَٱللَّهُ",
+              "indopak": "وَاللّٰهُ",
+              "lineNumber": 13
+            },
+            {
+              "code": "ﯽ",
+              "text": "يُحْىِۦ",
+              "indopak": "يُحۡىٖ",
+              "lineNumber": 13
+            },
+            {
+              "code": "ﯾﯿ",
+              "text": "وَيُمِيتُ ۗ",
+              "indopak": "وَيُمِيۡتُ​ؕ",
+              "lineNumber": 13
+            },
+            {
+              "code": "ﰀ",
+              "text": "وَٱللَّهُ",
+              "indopak": "وَ اللّٰهُ",
+              "lineNumber": 14
+            },
+            {
+              "code": "ﰁ",
+              "text": "بِمَا",
+              "indopak": "بِمَا",
+              "lineNumber": 14
+            },
+            {
+              "code": "ﰂ",
+              "text": "تَعْمَلُونَ",
+              "indopak": "تَعۡمَلُوۡنَ",
+              "lineNumber": 14
+            },
+            {
+              "code": "ﰃ",
+              "text": "بَصِيرٌۭ",
+              "indopak": "بَصِيۡرٌ‏ ﻿﻿",
+              "lineNumber": 14
+            },
+            {
+              "code": "ﰄ",
+              "text": null,
+              "indopak": "١٥٦",
+              "lineNumber": 14
+            }
+          ]
+        },
+        {
+          "ayahNum": 157,
+          "words": [
+            {
+              "code": "ﰅ",
+              "text": "وَلَئِن",
+              "indopak": "وَلَٮِٕنۡ",
+              "lineNumber": 14
+            },
+            {
+              "code": "ﰆ",
+              "text": "قُتِلْتُمْ",
+              "indopak": "قُتِلۡتُمۡ",
+              "lineNumber": 14
+            },
+            {
+              "code": "ﰇ",
+              "text": "فِى",
+              "indopak": "فِىۡ",
+              "lineNumber": 14
+            },
+            {
+              "code": "ﰈ",
+              "text": "سَبِيلِ",
+              "indopak": "سَبِيۡلِ",
+              "lineNumber": 14
+            },
+            {
+              "code": "ﰉ",
+              "text": "ٱللَّهِ",
+              "indopak": "اللّٰهِ",
+              "lineNumber": 14
+            },
+            {
+              "code": "ﰊ",
+              "text": "أَوْ",
+              "indopak": "اَوۡ",
+              "lineNumber": 15
+            },
+            {
+              "code": "ﰋ",
+              "text": "مُتُّمْ",
+              "indopak": "مُتُّمۡ",
+              "lineNumber": 15
+            },
+            {
+              "code": "ﰌ",
+              "text": "لَمَغْفِرَةٌۭ",
+              "indopak": "لَمَغۡفِرَةٌ",
+              "lineNumber": 15
+            },
+            {
+              "code": "ﰍ",
+              "text": "مِّنَ",
+              "indopak": "مِّنَ",
+              "lineNumber": 15
+            },
+            {
+              "code": "ﰎ",
+              "text": "ٱللَّهِ",
+              "indopak": "اللّٰهِ",
+              "lineNumber": 15
+            },
+            {
+              "code": "ﰏ",
+              "text": "وَرَحْمَةٌ",
+              "indopak": "وَرَحۡمَةٌ",
+              "lineNumber": 15
+            },
+            {
+              "code": "ﰐ",
+              "text": "خَيْرٌۭ",
+              "indopak": "خَيۡرٌ",
+              "lineNumber": 15
+            },
+            {
+              "code": "ﰑ",
+              "text": "مِّمَّا",
+              "indopak": "مِّمَّا",
+              "lineNumber": 15
+            },
+            {
+              "code": "ﰒ",
+              "text": "يَجْمَعُونَ",
+              "indopak": "يَجۡمَعُوۡنَ‏",
+              "lineNumber": 15
+            },
+            {
+              "code": "ﰓ",
+              "text": null,
+              "indopak": "١٥٧",
+              "lineNumber": 15
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

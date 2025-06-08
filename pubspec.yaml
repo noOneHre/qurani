@@ -1,0 +1,2528 @@
+name: qurani
+description: تطبيق القرآن الكريم لعرض صفحات المصحف والفهرس
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.0 <3.0.0"
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`.
+# To see which dependencies have newer versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  flutter_screenutil: ^5.9.0
+  quran: ^1.3.0
+  easy_container: ^1.0.1
+  wakelock_plus: ^1.1.3
+  flutter_lints: ^5.0.0
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
+
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/fonts/
+    - quran-assets/
+    - quran-assets/text/
+    - quran-assets/metadata/
+    - quran-assets/pages/
+    - quran-assets/indopak-word-by-word/
+    - assets/images/888-02.png
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  fonts:
+    - family: ScheherazadeNew
+      fonts:
+          - asset: assets/fonts/ScheherazadeNew-Regular.ttf
+    - family: KFGQPC
+      fonts:
+        - asset: assets/fonts/KFGQPC_Uthmanic_Script_HAFS_Regular.ttf
+
+    - family: ScheherazadeNew
+      fonts:
+        - asset: assets/fonts/ScheherazadeNew-Regular.ttf
+        - asset: assets/fonts/ScheherazadeNew-Bold.ttf
+          weight: 700
+    - family: KFGQPC_Uthmanic
+      fonts:
+        - asset: assets/fonts/UthmanicHafs1Ver09.ttf
+
+    - family: QCF_SURAH
+      fonts:
+        - asset: assets/fonts/Quran_Surah.ttf
+
+    - family: QCF_BSML
+      fonts:
+        - asset: assets/fonts/QCF2BSMLfonts/QCF_BSML.woff2
+    - family: QCF_P001
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P001.woff2
+    - family: uthmanic
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\UthmanTN1 Ver10.otf
+
+    - family: QCF_P002
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P002.woff2
+
+    - family: QCF_P003
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P003.woff2
+
+    - family: QCF_P004
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P004.woff2
+
+    - family: QCF_P005
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P005.woff2
+
+    - family: QCF_P006
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P006.woff2
+
+    - family: QCF_P007
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P007.woff2
+
+    - family: QCF_P008
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P008.woff2
+
+    - family: QCF_P009
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P009.woff2
+
+    - family: QCF_P010
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P010.woff2
+
+    - family: QCF_P011
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P011.woff2
+
+    - family: QCF_P012
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P012.woff2
+
+    - family: QCF_P013
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P013.woff2
+
+    - family: QCF_P014
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P014.woff2
+
+    - family: QCF_P015
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P015.woff2
+
+    - family: QCF_P016
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P016.woff2
+
+    - family: QCF_P017
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P017.woff2
+
+    - family: QCF_P018
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P018.woff2
+
+    - family: QCF_P019
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P019.woff2
+
+    - family: QCF_P020
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P020.woff2
+
+    - family: QCF_P021
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P021.woff2
+
+    - family: QCF_P022
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P022.woff2
+
+    - family: QCF_P023
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P023.woff2
+
+    - family: QCF_P024
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P024.woff2
+
+    - family: QCF_P025
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P025.woff2
+
+    - family: QCF_P026
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P026.woff2
+
+    - family: QCF_P027
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P027.woff2
+
+    - family: QCF_P028
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P028.woff2
+
+    - family: QCF_P029
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P029.woff2
+
+    - family: QCF_P030
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P030.woff2
+
+    - family: QCF_P031
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P031.woff2
+
+    - family: QCF_P032
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P032.woff2
+
+    - family: QCF_P033
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P033.woff2
+
+    - family: QCF_P034
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P034.woff2
+
+    - family: QCF_P035
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P035.woff2
+
+    - family: QCF_P036
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P036.woff2
+
+    - family: QCF_P037
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P037.woff2
+
+    - family: QCF_P038
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P038.woff2
+
+    - family: QCF_P039
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P039.woff2
+
+    - family: QCF_P040
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P040.woff2
+
+    - family: QCF_P041
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P041.woff2
+
+    - family: QCF_P042
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P042.woff2
+
+    - family: QCF_P043
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P043.woff2
+
+    - family: QCF_P044
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P044.woff2
+
+    - family: QCF_P045
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P045.woff2
+
+    - family: QCF_P046
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P046.woff2
+
+    - family: QCF_P047
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P047.woff2
+
+    - family: QCF_P048
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P048.woff2
+
+    - family: QCF_P049
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P049.woff2
+
+    - family: QCF_P050
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P050.woff2
+
+    - family: QCF_P051
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P051.woff2
+
+    - family: QCF_P052
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P052.woff2
+
+    - family: QCF_P053
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P053.woff2
+
+    - family: QCF_P054
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P054.woff2
+
+    - family: QCF_P055
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P055.woff2
+
+    - family: QCF_P056
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P056.woff2
+
+    - family: QCF_P057
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P057.woff2
+
+    - family: QCF_P058
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P058.woff2
+
+    - family: QCF_P059
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P059.woff2
+
+    - family: QCF_P060
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P060.woff2
+
+    - family: QCF_P061
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P061.woff2
+
+    - family: QCF_P062
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P062.woff2
+
+    - family: QCF_P063
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P063.woff2
+
+    - family: QCF_P064
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P064.woff2
+
+    - family: QCF_P065
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P065.woff2
+
+    - family: QCF_P066
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P066.woff2
+
+    - family: QCF_P067
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P067.woff2
+
+    - family: QCF_P068
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P068.woff2
+
+    - family: QCF_P069
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P069.woff2
+
+    - family: QCF_P070
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P070.woff2
+
+    - family: QCF_P071
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P071.woff2
+
+    - family: QCF_P072
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P072.woff2
+
+    - family: QCF_P073
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P073.woff2
+
+    - family: QCF_P074
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P074.woff2
+
+    - family: QCF_P075
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P075.woff2
+
+    - family: QCF_P076
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P076.woff2
+
+    - family: QCF_P077
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P077.woff2
+
+    - family: QCF_P078
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P078.woff2
+
+    - family: QCF_P079
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P079.woff2
+
+    - family: QCF_P080
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P080.woff2
+
+    - family: QCF_P081
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P081.woff2
+
+    - family: QCF_P082
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P082.woff2
+
+    - family: QCF_P083
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P083.woff2
+
+    - family: QCF_P084
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P084.woff2
+
+    - family: QCF_P085
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P085.woff2
+
+    - family: QCF_P086
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P086.woff2
+
+    - family: QCF_P087
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P087.woff2
+
+    - family: QCF_P088
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P088.woff2
+
+    - family: QCF_P089
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P089.woff2
+
+    - family: QCF_P090
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P090.woff2
+
+    - family: QCF_P091
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P091.woff2
+
+    - family: QCF_P092
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P092.woff2
+
+    - family: QCF_P093
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P093.woff2
+
+    - family: QCF_P094
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P094.woff2
+
+    - family: QCF_P095
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P095.woff2
+
+    - family: QCF_P096
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P096.woff2
+
+    - family: QCF_P097
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P097.woff2
+
+    - family: QCF_P098
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P098.woff2
+
+    - family: QCF_P099
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P099.woff2
+
+    - family: QCF_P100
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P100.woff2
+
+    - family: QCF_P101
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P101.woff2
+
+    - family: QCF_P102
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P102.woff2
+
+    - family: QCF_P103
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P103.woff2
+
+    - family: QCF_P104
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P104.woff2
+
+    - family: QCF_P105
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P105.woff2
+
+    - family: QCF_P106
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P106.woff2
+
+    - family: QCF_P107
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P107.woff2
+
+    - family: QCF_P108
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P108.woff2
+
+    - family: QCF_P109
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P109.woff2
+
+    - family: QCF_P110
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P110.woff2
+
+    - family: QCF_P111
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P111.woff2
+
+    - family: QCF_P112
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P112.woff2
+
+    - family: QCF_P113
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P113.woff2
+
+    - family: QCF_P114
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P114.woff2
+
+    - family: QCF_P115
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P115.woff2
+
+    - family: QCF_P116
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P116.woff2
+
+    - family: QCF_P117
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P117.woff2
+
+    - family: QCF_P118
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P118.woff2
+
+    - family: QCF_P119
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P119.woff2
+
+    - family: QCF_P120
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P120.woff2
+
+    - family: QCF_P121
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P121.woff2
+
+    - family: QCF_P122
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P122.woff2
+
+    - family: QCF_P123
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P123.woff2
+
+    - family: QCF_P124
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P124.woff2
+
+    - family: QCF_P125
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P125.woff2
+
+    - family: QCF_P126
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P126.woff2
+
+    - family: QCF_P127
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P127.woff2
+
+    - family: QCF_P128
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P128.woff2
+
+    - family: QCF_P129
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P129.woff2
+
+    - family: QCF_P130
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P130.woff2
+
+    - family: QCF_P131
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P131.woff2
+
+    - family: QCF_P132
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P132.woff2
+
+    - family: QCF_P133
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P133.woff2
+
+    - family: QCF_P134
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P134.woff2
+
+    - family: QCF_P135
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P135.woff2
+
+    - family: QCF_P136
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P136.woff2
+
+    - family: QCF_P137
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P137.woff2
+
+    - family: QCF_P138
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P138.woff2
+
+    - family: QCF_P139
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P139.woff2
+
+    - family: QCF_P140
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P140.woff2
+
+    - family: QCF_P141
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P141.woff2
+
+    - family: QCF_P142
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P142.woff2
+
+    - family: QCF_P143
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P143.woff2
+
+    - family: QCF_P144
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P144.woff2
+
+    - family: QCF_P145
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P145.woff2
+
+    - family: QCF_P146
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P146.woff2
+
+    - family: QCF_P147
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P147.woff2
+
+    - family: QCF_P148
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P148.woff2
+
+    - family: QCF_P149
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P149.woff2
+
+    - family: QCF_P150
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P150.woff2
+
+    - family: QCF_P151
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P151.woff2
+
+    - family: QCF_P152
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P152.woff2
+
+    - family: QCF_P153
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P153.woff2
+
+    - family: QCF_P154
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P154.woff2
+
+    - family: QCF_P155
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P155.woff2
+
+    - family: QCF_P156
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P156.woff2
+
+    - family: QCF_P157
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P157.woff2
+
+    - family: QCF_P158
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P158.woff2
+
+    - family: QCF_P159
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P159.woff2
+
+    - family: QCF_P160
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P160.woff2
+
+    - family: QCF_P161
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P161.woff2
+
+    - family: QCF_P162
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P162.woff2
+
+    - family: QCF_P163
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P163.woff2
+
+    - family: QCF_P164
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P164.woff2
+
+    - family: QCF_P165
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P165.woff2
+
+    - family: QCF_P166
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P166.woff2
+
+    - family: QCF_P167
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P167.woff2
+
+    - family: QCF_P168
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P168.woff2
+
+    - family: QCF_P169
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P169.woff2
+
+    - family: QCF_P170
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P170.woff2
+
+    - family: QCF_P171
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P171.woff2
+
+    - family: QCF_P172
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P172.woff2
+
+    - family: QCF_P173
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P173.woff2
+
+    - family: QCF_P174
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P174.woff2
+
+    - family: QCF_P175
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P175.woff2
+
+    - family: QCF_P176
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P176.woff2
+
+    - family: QCF_P177
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P177.woff2
+
+    - family: QCF_P178
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P178.woff2
+
+    - family: QCF_P179
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P179.woff2
+
+    - family: QCF_P180
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P180.woff2
+
+    - family: QCF_P181
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P181.woff2
+
+    - family: QCF_P182
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P182.woff2
+
+    - family: QCF_P183
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P183.woff2
+
+    - family: QCF_P184
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P184.woff2
+
+    - family: QCF_P185
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P185.woff2
+
+    - family: QCF_P186
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P186.woff2
+
+    - family: QCF_P187
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P187.woff2
+
+    - family: QCF_P188
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P188.woff2
+
+    - family: QCF_P189
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P189.woff2
+
+    - family: QCF_P190
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P190.woff2
+
+    - family: QCF_P191
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P191.woff2
+
+    - family: QCF_P192
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P192.woff2
+
+    - family: QCF_P193
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P193.woff2
+
+    - family: QCF_P194
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P194.woff2
+
+    - family: QCF_P195
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P195.woff2
+
+    - family: QCF_P196
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P196.woff2
+
+    - family: QCF_P197
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P197.woff2
+
+    - family: QCF_P198
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P198.woff2
+
+    - family: QCF_P199
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P199.woff2
+
+    - family: QCF_P200
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P200.woff2
+
+    - family: QCF_P201
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P201.woff2
+
+    - family: QCF_P202
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P202.woff2
+
+    - family: QCF_P203
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P203.woff2
+
+    - family: QCF_P204
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P204.woff2
+
+    - family: QCF_P205
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P205.woff2
+
+    - family: QCF_P206
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P206.woff2
+
+    - family: QCF_P207
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P207.woff2
+
+    - family: QCF_P208
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P208.woff2
+
+    - family: QCF_P209
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P209.woff2
+
+    - family: QCF_P210
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P210.woff2
+
+    - family: QCF_P211
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P211.woff2
+
+    - family: QCF_P212
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P212.woff2
+
+    - family: QCF_P213
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P213.woff2
+
+    - family: QCF_P214
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P214.woff2
+
+    - family: QCF_P215
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P215.woff2
+
+    - family: QCF_P216
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P216.woff2
+
+    - family: QCF_P217
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P217.woff2
+
+    - family: QCF_P218
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P218.woff2
+
+    - family: QCF_P219
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P219.woff2
+
+    - family: QCF_P220
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P220.woff2
+
+    - family: QCF_P221
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P221.woff2
+
+    - family: QCF_P222
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P222.woff2
+
+    - family: QCF_P223
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P223.woff2
+
+    - family: QCF_P224
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P224.woff2
+
+    - family: QCF_P225
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P225.woff2
+
+    - family: QCF_P226
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P226.woff2
+
+    - family: QCF_P227
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P227.woff2
+
+    - family: QCF_P228
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P228.woff2
+
+    - family: QCF_P229
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P229.woff2
+
+    - family: QCF_P230
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P230.woff2
+
+    - family: QCF_P231
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P231.woff2
+
+    - family: QCF_P232
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P232.woff2
+
+    - family: QCF_P233
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P233.woff2
+
+    - family: QCF_P234
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P234.woff2
+
+    - family: QCF_P235
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P235.woff2
+
+    - family: QCF_P236
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P236.woff2
+
+    - family: QCF_P237
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P237.woff2
+
+    - family: QCF_P238
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P238.woff2
+
+    - family: QCF_P239
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P239.woff2
+
+    - family: QCF_P240
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P240.woff2
+
+    - family: QCF_P241
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P241.woff2
+
+    - family: QCF_P242
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P242.woff2
+
+    - family: QCF_P243
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P243.woff2
+
+    - family: QCF_P244
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P244.woff2
+
+    - family: QCF_P245
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P245.woff2
+
+    - family: QCF_P246
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P246.woff2
+
+    - family: QCF_P247
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P247.woff2
+
+    - family: QCF_P248
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P248.woff2
+
+    - family: QCF_P249
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P249.woff2
+
+    - family: QCF_P250
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P250.woff2
+
+    - family: QCF_P251
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P251.woff2
+
+    - family: QCF_P252
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P252.woff2
+
+    - family: QCF_P253
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P253.woff2
+
+    - family: QCF_P254
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P254.woff2
+
+    - family: QCF_P255
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P255.woff2
+
+    - family: QCF_P256
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P256.woff2
+
+    - family: QCF_P257
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P257.woff2
+
+    - family: QCF_P258
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P258.woff2
+
+    - family: QCF_P259
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P259.woff2
+
+    - family: QCF_P260
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P260.woff2
+
+    - family: QCF_P261
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P261.woff2
+
+    - family: QCF_P262
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P262.woff2
+
+    - family: QCF_P263
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P263.woff2
+
+    - family: QCF_P264
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P264.woff2
+
+    - family: QCF_P265
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P265.woff2
+
+    - family: QCF_P266
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P266.woff2
+
+    - family: QCF_P267
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P267.woff2
+
+    - family: QCF_P268
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P268.woff2
+
+    - family: QCF_P269
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P269.woff2
+
+    - family: QCF_P270
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P270.woff2
+
+    - family: QCF_P271
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P271.woff2
+
+    - family: QCF_P272
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P272.woff2
+
+    - family: QCF_P273
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P273.woff2
+
+    - family: QCF_P274
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P274.woff2
+
+    - family: QCF_P275
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P275.woff2
+
+    - family: QCF_P276
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P276.woff2
+
+    - family: QCF_P277
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P277.woff2
+
+    - family: QCF_P278
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P278.woff2
+
+    - family: QCF_P279
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P279.woff2
+
+    - family: QCF_P280
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P280.woff2
+
+    - family: QCF_P281
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P281.woff2
+
+    - family: QCF_P282
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P282.woff2
+
+    - family: QCF_P283
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P283.woff2
+
+    - family: QCF_P284
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P284.woff2
+
+    - family: QCF_P285
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P285.woff2
+
+    - family: QCF_P286
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P286.woff2
+
+    - family: QCF_P287
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P287.woff2
+
+    - family: QCF_P288
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P288.woff2
+
+    - family: QCF_P289
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P289.woff2
+
+    - family: QCF_P290
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P290.woff2
+
+    - family: QCF_P291
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P291.woff2
+
+    - family: QCF_P292
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P292.woff2
+
+    - family: QCF_P293
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P293.woff2
+
+    - family: QCF_P294
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P294.woff2
+
+    - family: QCF_P295
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P295.woff2
+
+    - family: QCF_P296
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P296.woff2
+
+    - family: QCF_P297
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P297.woff2
+
+    - family: QCF_P298
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P298.woff2
+
+    - family: QCF_P299
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P299.woff2
+
+    - family: QCF_P300
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P300.woff2
+
+    - family: QCF_P301
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P301.woff2
+
+    - family: QCF_P302
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P302.woff2
+
+    - family: QCF_P303
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P303.woff2
+
+    - family: QCF_P304
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P304.woff2
+
+    - family: QCF_P305
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P305.woff2
+
+    - family: QCF_P306
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P306.woff2
+
+    - family: QCF_P307
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P307.woff2
+
+    - family: QCF_P308
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P308.woff2
+
+    - family: QCF_P309
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P309.woff2
+
+    - family: QCF_P310
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P310.woff2
+
+    - family: QCF_P311
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P311.woff2
+
+    - family: QCF_P312
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P312.woff2
+
+    - family: QCF_P313
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P313.woff2
+
+    - family: QCF_P314
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P314.woff2
+
+    - family: QCF_P315
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P315.woff2
+
+    - family: QCF_P316
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P316.woff2
+
+    - family: QCF_P317
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P317.woff2
+
+    - family: QCF_P318
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P318.woff2
+
+    - family: QCF_P319
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P319.woff2
+
+    - family: QCF_P320
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P320.woff2
+
+    - family: QCF_P321
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P321.woff2
+
+    - family: QCF_P322
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P322.woff2
+
+    - family: QCF_P323
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P323.woff2
+
+    - family: QCF_P324
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P324.woff2
+
+    - family: QCF_P325
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P325.woff2
+
+    - family: QCF_P326
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P326.woff2
+
+    - family: QCF_P327
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P327.woff2
+
+    - family: QCF_P328
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P328.woff2
+
+    - family: QCF_P329
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P329.woff2
+
+    - family: QCF_P330
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P330.woff2
+
+    - family: QCF_P331
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P331.woff2
+
+    - family: QCF_P332
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P332.woff2
+
+    - family: QCF_P333
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P333.woff2
+
+    - family: QCF_P334
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P334.woff2
+
+    - family: QCF_P335
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P335.woff2
+
+    - family: QCF_P336
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P336.woff2
+
+    - family: QCF_P337
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P337.woff2
+
+    - family: QCF_P338
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P338.woff2
+
+    - family: QCF_P339
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P339.woff2
+
+    - family: QCF_P340
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P340.woff2
+
+    - family: QCF_P341
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P341.woff2
+
+    - family: QCF_P342
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P342.woff2
+
+    - family: QCF_P343
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P343.woff2
+
+    - family: QCF_P344
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P344.woff2
+
+    - family: QCF_P345
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P345.woff2
+
+    - family: QCF_P346
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P346.woff2
+
+    - family: QCF_P347
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P347.woff2
+
+    - family: QCF_P348
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P348.woff2
+
+    - family: QCF_P349
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P349.woff2
+
+    - family: QCF_P350
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P350.woff2
+
+    - family: QCF_P351
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P351.woff2
+
+    - family: QCF_P352
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P352.woff2
+
+    - family: QCF_P353
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P353.woff2
+
+    - family: QCF_P354
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P354.woff2
+
+    - family: QCF_P355
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P355.woff2
+
+    - family: QCF_P356
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P356.woff2
+
+    - family: QCF_P357
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P357.woff2
+
+    - family: QCF_P358
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P358.woff2
+
+    - family: QCF_P359
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P359.woff2
+
+    - family: QCF_P360
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P360.woff2
+
+    - family: QCF_P361
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P361.woff2
+
+    - family: QCF_P362
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P362.woff2
+
+    - family: QCF_P363
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P363.woff2
+
+    - family: QCF_P364
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P364.woff2
+
+    - family: QCF_P365
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P365.woff2
+
+    - family: QCF_P366
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P366.woff2
+
+    - family: QCF_P367
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P367.woff2
+
+    - family: QCF_P368
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P368.woff2
+
+    - family: QCF_P369
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P369.woff2
+
+    - family: QCF_P370
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P370.woff2
+
+    - family: QCF_P371
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P371.woff2
+
+    - family: QCF_P372
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P372.woff2
+
+    - family: QCF_P373
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P373.woff2
+
+    - family: QCF_P374
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P374.woff2
+
+    - family: QCF_P375
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P375.woff2
+
+    - family: QCF_P376
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P376.woff2
+
+    - family: QCF_P377
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P377.woff2
+
+    - family: QCF_P378
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P378.woff2
+
+    - family: QCF_P379
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P379.woff2
+
+    - family: QCF_P380
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P380.woff2
+
+    - family: QCF_P381
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P381.woff2
+
+    - family: QCF_P382
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P382.woff2
+
+    - family: QCF_P383
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P383.woff2
+
+    - family: QCF_P384
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P384.woff2
+
+    - family: QCF_P385
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P385.woff2
+
+    - family: QCF_P386
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P386.woff2
+
+    - family: QCF_P387
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P387.woff2
+
+    - family: QCF_P388
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P388.woff2
+
+    - family: QCF_P389
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P389.woff2
+
+    - family: QCF_P390
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P390.woff2
+
+    - family: QCF_P391
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P391.woff2
+
+    - family: QCF_P392
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P392.woff2
+
+    - family: QCF_P393
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P393.woff2
+
+    - family: QCF_P394
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P394.woff2
+
+    - family: QCF_P395
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P395.woff2
+
+    - family: QCF_P396
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P396.woff2
+
+    - family: QCF_P397
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P397.woff2
+
+    - family: QCF_P398
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P398.woff2
+
+    - family: QCF_P399
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P399.woff2
+
+    - family: QCF_P400
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P400.woff2
+
+    - family: QCF_P401
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P401.woff2
+
+    - family: QCF_P402
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P402.woff2
+
+    - family: QCF_P403
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P403.woff2
+
+    - family: QCF_P404
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P404.woff2
+
+    - family: QCF_P405
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P405.woff2
+
+    - family: QCF_P406
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P406.woff2
+
+    - family: QCF_P407
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P407.woff2
+
+    - family: QCF_P408
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P408.woff2
+
+    - family: QCF_P409
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P409.woff2
+
+    - family: QCF_P410
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P410.woff2
+
+    - family: QCF_P411
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P411.woff2
+
+    - family: QCF_P412
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P412.woff2
+
+    - family: QCF_P413
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P413.woff2
+
+    - family: QCF_P414
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P414.woff2
+
+    - family: QCF_P415
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P415.woff2
+
+    - family: QCF_P416
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P416.woff2
+
+    - family: QCF_P417
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P417.woff2
+
+    - family: QCF_P418
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P418.woff2
+
+    - family: QCF_P419
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P419.woff2
+
+    - family: QCF_P420
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P420.woff2
+
+    - family: QCF_P421
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P421.woff2
+
+    - family: QCF_P422
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P422.woff2
+
+    - family: QCF_P423
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P423.woff2
+
+    - family: QCF_P424
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P424.woff2
+
+    - family: QCF_P425
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P425.woff2
+
+    - family: QCF_P426
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P426.woff2
+
+    - family: QCF_P427
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P427.woff2
+
+    - family: QCF_P428
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P428.woff2
+
+    - family: QCF_P429
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P429.woff2
+
+    - family: QCF_P430
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P430.woff2
+
+    - family: QCF_P431
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P431.woff2
+
+    - family: QCF_P432
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P432.woff2
+
+    - family: QCF_P433
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P433.woff2
+
+    - family: QCF_P434
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P434.woff2
+
+    - family: QCF_P435
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P435.woff2
+
+    - family: QCF_P436
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P436.woff2
+
+    - family: QCF_P437
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P437.woff2
+
+    - family: QCF_P438
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P438.woff2
+
+    - family: QCF_P439
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P439.woff2
+
+    - family: QCF_P440
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P440.woff2
+
+    - family: QCF_P441
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P441.woff2
+
+    - family: QCF_P442
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P442.woff2
+
+    - family: QCF_P443
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P443.woff2
+
+    - family: QCF_P444
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P444.woff2
+
+    - family: QCF_P445
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P445.woff2
+
+    - family: QCF_P446
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P446.woff2
+
+    - family: QCF_P447
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P447.woff2
+
+    - family: QCF_P448
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P448.woff2
+
+    - family: QCF_P449
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P449.woff2
+
+    - family: QCF_P450
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P450.woff2
+
+    - family: QCF_P451
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P451.woff2
+
+    - family: QCF_P452
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P452.woff2
+
+    - family: QCF_P453
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P453.woff2
+
+    - family: QCF_P454
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P454.woff2
+
+    - family: QCF_P455
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P455.woff2
+
+    - family: QCF_P456
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P456.woff2
+
+    - family: QCF_P457
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P457.woff2
+
+    - family: QCF_P458
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P458.woff2
+
+    - family: QCF_P459
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P459.woff2
+
+    - family: QCF_P460
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P460.woff2
+
+    - family: QCF_P461
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P461.woff2
+
+    - family: QCF_P462
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P462.woff2
+
+    - family: QCF_P463
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P463.woff2
+
+    - family: QCF_P464
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P464.woff2
+
+    - family: QCF_P465
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P465.woff2
+
+    - family: QCF_P466
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P466.woff2
+
+    - family: QCF_P467
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P467.woff2
+
+    - family: QCF_P468
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P468.woff2
+
+    - family: QCF_P469
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P469.woff2
+
+    - family: QCF_P470
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P470.woff2
+
+    - family: QCF_P471
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P471.woff2
+
+    - family: QCF_P472
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P472.woff2
+
+    - family: QCF_P473
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P473.woff2
+
+    - family: QCF_P474
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P474.woff2
+
+    - family: QCF_P475
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P475.woff2
+
+    - family: QCF_P476
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P476.woff2
+
+    - family: QCF_P477
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P477.woff2
+
+    - family: QCF_P478
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P478.woff2
+
+    - family: QCF_P479
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P479.woff2
+
+    - family: QCF_P480
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P480.woff2
+
+    - family: QCF_P481
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P481.woff2
+
+    - family: QCF_P482
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P482.woff2
+
+    - family: QCF_P483
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P483.woff2
+
+    - family: QCF_P484
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P484.woff2
+
+    - family: QCF_P485
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P485.woff2
+
+    - family: QCF_P486
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P486.woff2
+
+    - family: QCF_P487
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P487.woff2
+
+    - family: QCF_P488
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P488.woff2
+
+    - family: QCF_P489
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P489.woff2
+
+    - family: QCF_P490
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P490.woff2
+
+    - family: QCF_P491
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P491.woff2
+
+    - family: QCF_P492
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P492.woff2
+
+    - family: QCF_P493
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P493.woff2
+
+    - family: QCF_P494
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P494.woff2
+
+    - family: QCF_P495
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P495.woff2
+
+    - family: QCF_P496
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P496.woff2
+
+    - family: QCF_P497
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P497.woff2
+
+    - family: QCF_P498
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P498.woff2
+
+    - family: QCF_P499
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P499.woff2
+
+    - family: QCF_P500
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P500.woff2
+
+    - family: QCF_P501
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P501.woff2
+
+    - family: QCF_P502
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P502.woff2
+
+    - family: QCF_P503
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P503.woff2
+
+    - family: QCF_P504
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P504.woff2
+
+    - family: QCF_P505
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P505.woff2
+
+    - family: QCF_P506
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P506.woff2
+
+    - family: QCF_P507
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P507.woff2
+
+    - family: QCF_P508
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P508.woff2
+
+    - family: QCF_P509
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P509.woff2
+
+    - family: QCF_P510
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P510.woff2
+
+    - family: QCF_P511
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P511.woff2
+
+    - family: QCF_P512
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P512.woff2
+
+    - family: QCF_P513
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P513.woff2
+
+    - family: QCF_P514
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P514.woff2
+
+    - family: QCF_P515
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P515.woff2
+
+    - family: QCF_P516
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P516.woff2
+
+    - family: QCF_P517
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P517.woff2
+
+    - family: QCF_P518
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P518.woff2
+
+    - family: QCF_P519
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P519.woff2
+
+    - family: QCF_P520
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P520.woff2
+
+    - family: QCF_P521
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P521.woff2
+
+    - family: QCF_P522
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P522.woff2
+
+    - family: QCF_P523
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P523.woff2
+
+    - family: QCF_P524
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P524.woff2
+
+    - family: QCF_P525
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P525.woff2
+
+    - family: QCF_P526
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P526.woff2
+
+    - family: QCF_P527
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P527.woff2
+
+    - family: QCF_P528
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P528.woff2
+
+    - family: QCF_P529
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P529.woff2
+
+    - family: QCF_P530
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P530.woff2
+
+    - family: QCF_P531
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P531.woff2
+
+    - family: QCF_P532
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P532.woff2
+
+    - family: QCF_P533
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P533.woff2
+
+    - family: QCF_P534
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P534.woff2
+
+    - family: QCF_P535
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P535.woff2
+
+    - family: QCF_P536
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P536.woff2
+
+    - family: QCF_P537
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P537.woff2
+
+    - family: QCF_P538
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P538.woff2
+
+    - family: QCF_P539
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P539.woff2
+
+    - family: QCF_P540
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P540.woff2
+
+    - family: QCF_P541
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P541.woff2
+
+    - family: QCF_P542
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P542.woff2
+
+    - family: QCF_P543
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P543.woff2
+
+    - family: QCF_P544
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P544.woff2
+
+    - family: QCF_P545
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P545.woff2
+
+    - family: QCF_P546
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P546.woff2
+
+    - family: QCF_P547
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P547.woff2
+
+    - family: QCF_P548
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P548.woff2
+
+    - family: QCF_P549
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P549.woff2
+
+    - family: QCF_P550
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P550.woff2
+
+    - family: QCF_P551
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P551.woff2
+
+    - family: QCF_P552
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P552.woff2
+
+    - family: QCF_P553
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P553.woff2
+
+    - family: QCF_P554
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P554.woff2
+
+    - family: QCF_P555
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P555.woff2
+
+    - family: QCF_P556
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P556.woff2
+
+    - family: QCF_P557
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P557.woff2
+
+    - family: QCF_P558
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P558.woff2
+
+    - family: QCF_P559
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P559.woff2
+
+    - family: QCF_P560
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P560.woff2
+
+    - family: QCF_P561
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P561.woff2
+
+    - family: QCF_P562
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P562.woff2
+
+    - family: QCF_P563
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P563.woff2
+
+    - family: QCF_P564
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P564.woff2
+
+    - family: QCF_P565
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P565.woff2
+
+    - family: QCF_P566
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P566.woff2
+
+    - family: QCF_P567
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P567.woff2
+
+    - family: QCF_P568
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P568.woff2
+
+    - family: QCF_P569
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P569.woff2
+
+    - family: QCF_P570
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P570.woff2
+
+    - family: QCF_P571
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P571.woff2
+
+    - family: QCF_P572
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P572.woff2
+
+    - family: QCF_P573
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P573.woff2
+
+    - family: QCF_P574
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P574.woff2
+
+    - family: QCF_P575
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P575.woff2
+
+    - family: QCF_P576
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P576.woff2
+
+    - family: QCF_P577
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P577.woff2
+
+    - family: QCF_P578
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P578.woff2
+
+    - family: QCF_P579
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P579.woff2
+
+    - family: QCF_P580
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P580.woff2
+
+    - family: QCF_P581
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P581.woff2
+
+    - family: QCF_P582
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P582.woff2
+
+    - family: QCF_P583
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P583.woff2
+
+    - family: QCF_P584
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P584.woff2
+
+    - family: QCF_P585
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P585.woff2
+
+    - family: QCF_P586
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P586.woff2
+
+    - family: QCF_P587
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P587.woff2
+
+    - family: QCF_P588
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P588.woff2
+
+    - family: QCF_P589
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P589.woff2
+
+    - family: QCF_P590
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P590.woff2
+
+    - family: QCF_P591
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P591.woff2
+
+    - family: QCF_P592
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P592.woff2
+
+    - family: QCF_P593
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P593.woff2
+
+    - family: QCF_P594
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P594.woff2
+
+    - family: QCF_P595
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P595.woff2
+
+    - family: QCF_P596
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P596.woff2
+
+    - family: QCF_P597
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P597.woff2
+
+    - family: QCF_P598
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P598.woff2
+
+    - family: QCF_P599
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P599.woff2
+
+    - family: QCF_P600
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P600.woff2
+
+    - family: QCF_P601
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P601.woff2
+
+    - family: QCF_P602
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P602.woff2
+
+    - family: QCF_P603
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P603.woff2
+
+    - family: QCF_P604
+      fonts:
+        - asset: assets\fonts\QCF2BSMLfonts\QCF_P604.woff2
