@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-// استيراد النماذج من مجلد models
+// Importing models from the models directory
 import 'package:qurani/models/surah_info.dart';
 import 'package:qurani/models/quran_page.dart';
 import 'package:qurani/models/ayah.dart';
@@ -12,7 +12,7 @@ import 'package:qurani/models/word.dart';
 import 'package:qurani/models/surah.dart';
 import 'package:qurani/models/page.dart';
 
-// استيراد بيانات القرآن
+// Importing Quran data
 import 'package:qurani/data/quran_data.dart';
 
 void main() {
@@ -34,7 +34,7 @@ class QuranApp extends StatelessWidget {
           title: 'تطبيق القرآن الكريم',
           theme: ThemeData(
             primarySwatch: Colors.green,
-            fontFamily: 'ScheherazadeNew', // خط افتراضي احتياطي
+            fontFamily: 'ScheherazadeNew', // Fallback default font
             scaffoldBackgroundColor: const Color(0xFFF8F3E9),
             appBarTheme: const AppBarTheme(
               backgroundColor: Color(0xFF1D3F5E),
@@ -183,7 +183,7 @@ class _IndexPageState extends State<IndexPage> {
                   style: const TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
-                    fontFamily: "KFGQPC", // استخدام خط QCF_BSML لأسماء السور
+                    fontFamily: "KFGQPC", // Use QCF_BSML font for surah names
                   ),
                 ),
                 subtitle: Text(
@@ -241,7 +241,7 @@ class _IndexPageState extends State<IndexPage> {
   }
 }
 
-// HeaderWidget المعدل لعرض اسم السورة بالشكل المطلوب
+// Modified HeaderWidget to display the Surah name as required
 class HeaderWidget extends StatelessWidget {
   final SurahInfo surahInfo;
 
@@ -274,14 +274,14 @@ class HeaderWidget extends StatelessWidget {
                   style: TextStyle(
                     color: const Color(0xFF000000).withOpacity(.9),
                     fontSize: 5.sp,
-                    fontFamily: "KFGQPC", // استخدام خط QCF_BSML
+                    fontFamily: "KFGQPC", // Use QCF_BSML font
                   ),
                 ),
                 Center(
                   child: Text(
                     "${surahInfo.nameAr}",
                     style: TextStyle(
-                      fontFamily: "KFGQPC", // استخدام خط QCF_BSML لأسماء السور
+                      fontFamily: "KFGQPC", // Use QCF_BSML font for surah names
                       fontSize: 25.sp,
                       color: const Color(0xFF000000).withOpacity(.9),
                     ),
@@ -294,7 +294,7 @@ class HeaderWidget extends StatelessWidget {
                   style: TextStyle(
                     color: const Color(0xFF000000).withOpacity(.9),
                     fontSize: 5.sp,
-                    fontFamily: "KFGQPC", // استخدام خط QCF_BSML
+                    fontFamily: "KFGQPC", // Use QCF_BSML font
                   ),
                 ),
               ],
@@ -323,47 +323,47 @@ class _MushafPageState extends State<MushafPage> {
   List<SurahInfo> pageSurahs = [];
   String pageTitle = "";
   String selectedSpan = "";
-  List<String> selectedWords = []; // قائمة لتخزين الكلمات المحددة
-  bool isSelectionMode = false; // حالة التحديد
+  List<String> selectedWords = []; // List to store selected words
+  bool isSelectionMode = false; // Selection state
   int juz = 0;
   int hizb = 0;
   int rub = 0;
 
-  // تعريف الألوان
-  final Color primaryColor = const Color(0xFF000000); // أسود
-  final Color secondaryColor = const Color(0xFF757575); // رمادي
-  final Color highlightColor = const Color(0xFFFFD54F); // أصفر
-  final Color backgroundColor = const Color(0xFFF8F3E9); // بيج فاتح
+  // Defining colors
+  final Color primaryColor = const Color(0xFF000000); // Black
+  final Color secondaryColor = const Color(0xFF757575); // Gray
+  final Color highlightColor = const Color(0xFFFFD54F); // Yellow
+  final Color backgroundColor = const Color(0xFFF8F3E9); // Light Beige
 
-  // إعدادات الخط
-  double pageFontSize = 17.0; // حجم الخط ثابت
-  late String fontFamily; // سيتم تحديده بناءً على رقم الصفحة
-  double lineHeight = 1.85; // ارتفاع السطر
-  double letterSpacing = 0.0; // المسافة بين الحروف
+  // Font settings
+  double pageFontSize = 17.0; // Fixed font size
+  late String fontFamily; // Will be determined based on page number
+  double lineHeight = 1.85; // Line height
+  double letterSpacing = 0.0; // Letter spacing
 
   final ScrollController _scrollController = ScrollController();
 
   @override
   void initState() {
     super.initState();
-    // تحديد الخط المناسب بناءً على رقم الصفحة
+    // Determine the appropriate font based on the page number
     fontFamily = getPageFont(widget.pageNumber);
     loadPage();
   }
 
-  // دالة لتحديد الخط المناسب بناءً على رقم الصفحة
+  // Function to determine the appropriate font based on the page number
   String getPageFont(int pageNumber) {
-    // التأكد من أن رقم الصفحة ضمن النطاق المسموح به
+    // Ensure the page number is within the allowed range
     if (pageNumber < 1) {
       pageNumber = 1;
     } else if (pageNumber > 604) {
       pageNumber = 604;
     }
 
-    // تنسيق رقم الصفحة ليكون بثلاثة أرقام (مثلاً: 001، 023، 604)
+    // Format the page number to be three digits (e.g., 001, 023, 604)
     String formattedPageNumber = pageNumber.toString().padLeft(3, '0');
 
-    // إرجاع اسم الخط المناسب
+    // Return the appropriate font name
     return 'QCF_P$formattedPageNumber';
   }
 
@@ -410,11 +410,11 @@ class _MushafPageState extends State<MushafPage> {
 
                 if (ayahData['words'] != null) {
                   for (var wordData in ayahData['words']) {
-                    // استخدام حقل text بدلاً من indopak
+                    // Using the text field instead of indopak
                     String text = wordData['text'] ?? "";
                     int lineNumber = wordData['lineNumber'] ?? 0;
 
-                    // تحقق مما إذا كانت هذه الكلمة هي رقم الآية في ملف JSON
+                    // Check if this word is the ayah number in the JSON file
                     if (wordData['text'] == null && RegExp(r'^\d+$').hasMatch(wordData['code'] ?? "")) {
                       hasAyahNumberInJson = true;
                     } else if (text.isNotEmpty) {
@@ -517,12 +517,12 @@ class _MushafPageState extends State<MushafPage> {
         title: Text(
           pageTitle,
           style: const TextStyle(
-            fontFamily: "KFGQPC", // استخدام خط QCF_BSML لعنوان الصفحة
+            fontFamily: "KFGQPC", // Use QCF_BSML font for page title
           ),
         ),
         centerTitle: true,
         actions: [
-          // زر لتفعيل وضع التحديد
+          // Button to toggle selection mode
           IconButton(
             icon: Icon(isSelectionMode ? Icons.text_format : Icons.text_format_outlined),
             onPressed: () {
@@ -544,18 +544,18 @@ class _MushafPageState extends State<MushafPage> {
           IconButton(
             icon: const Icon(Icons.settings),
             onPressed: () {
-              // إظهار إعدادات القراءة
+              // Show reading settings
             },
           ),
         ],
       ),
       body: GestureDetector(
-        // إضافة GestureDetector للتعامل مع السحب للتنقل بين الصفحات
+        // Add GestureDetector to handle swipe gestures for page navigation
         onHorizontalDragEnd: (details) {
-          // التنقل بين الصفحات عند السحب أفقياً
+          // Navigate between pages on horizontal swipe
           if (!isSelectionMode && details.primaryVelocity != null) {
             if (details.primaryVelocity! > 0) {
-              // سحب من اليسار إلى اليمين (الصفحة التالية) - تم تعديل الاتجاه
+              // Swipe from left to right (next page) - direction adjusted
               if (widget.pageNumber < 604) {
                 Navigator.pushReplacement(
                   context,
@@ -565,7 +565,7 @@ class _MushafPageState extends State<MushafPage> {
                 );
               }
             } else if (details.primaryVelocity! < 0) {
-              // سحب من اليمين إلى اليسار (الصفحة السابقة) - تم تعديل الاتجاه
+              // Swipe from right to left (previous page) - direction adjusted
               if (widget.pageNumber > 1) {
                 Navigator.pushReplacement(
                   context,
@@ -583,7 +583,7 @@ class _MushafPageState extends State<MushafPage> {
           controller: _scrollController,
           child: Column(
             children: [
-              // معلومات الصفحة (الجزء، الحزب، الربع)
+              // Page information (Juz, Hizb, Rub)
               Container(
                 padding: const EdgeInsets.symmetric(vertical: 8),
                 color: Colors.white,
@@ -597,7 +597,7 @@ class _MushafPageState extends State<MushafPage> {
                   ],
                 ),
               ),
-              // معلومات الخط المستخدم (للتوضيح فقط)
+              // Font information (for clarification only)
               Container(
                 padding: const EdgeInsets.symmetric(vertical: 4),
                 color: Colors.white,
@@ -610,7 +610,7 @@ class _MushafPageState extends State<MushafPage> {
                   textAlign: TextAlign.center,
                 ),
               ),
-              // محتوى الصفحة
+              // Page content
               Container(
                 padding: const EdgeInsets.all(16),
                 color: backgroundColor,
@@ -669,7 +669,7 @@ class _MushafPageState extends State<MushafPage> {
         children: [
           FloatingActionButton(
             onPressed: () {
-              // نسخ النص المحدد
+              // Copy selected text
               _copyToClipboard(selectedWords.join(' '));
               ScaffoldMessenger.of(context).showSnackBar(
                 const SnackBar(
@@ -685,7 +685,7 @@ class _MushafPageState extends State<MushafPage> {
           const SizedBox(height: 8),
           FloatingActionButton(
             onPressed: () {
-              // إلغاء التحديد
+              // Cancel selection
               setState(() {
                 selectedWords = [];
                 isSelectionMode = false;
@@ -702,7 +702,7 @@ class _MushafPageState extends State<MushafPage> {
   }
 
   Widget _buildQuranPageContent() {
-    // تنظيم الآيات حسب السور
+    // Organize ayahs by surah
     Map<int, List<Map<String, dynamic>>> surahAyahs = {};
 
     for (var ayah in pageAyahs) {
@@ -715,24 +715,24 @@ class _MushafPageState extends State<MushafPage> {
 
     List<Widget> content = [];
 
-    // إضافة محتوى كل سورة
+    // Add content for each surah
     for (var surahInfo in pageSurahs) {
       int surahNumber = surahInfo.number;
 
-      // إضافة رأس السورة إذا كانت الآية الأولى في الصفحة هي بداية السورة
+      // Add surah header if the first ayah on the page is the beginning of the surah
       if (surahAyahs.containsKey(surahNumber) &&
           surahAyahs[surahNumber]!.isNotEmpty &&
           surahAyahs[surahNumber]![0]['ayahNumber'] == 1) {
-        // استخدام HeaderWidget المعدل لعرض اسم السورة
+        // Use the modified HeaderWidget to display the surah name
         content.add(HeaderWidget(surahInfo: surahInfo));
 
-        // إضافة البسملة إذا لم تكن سورة التوبة
+        // Add the Basmala if it's not Surah At-Tawbah
         if (surahNumber != 9) {
           content.add(_buildBasmala());
         }
       }
 
-      // إضافة آيات السورة
+      // Add surah ayahs
       if (surahAyahs.containsKey(surahNumber)) {
         content.add(
           Directionality(
@@ -747,8 +747,8 @@ class _MushafPageState extends State<MushafPage> {
                   style: TextStyle(
                     color: primaryColor,
                     fontSize: pageFontSize.sp,
-                    // استخدام خط احتياطي إذا كان الخط المحدد غير متوفر
-                    fontFamily: 'ScheherazadeNew', // خط احتياطي
+                    // Use a fallback font if the specified font is not available
+                    fontFamily: 'ScheherazadeNew', // Fallback font
                     height: lineHeight,
                     letterSpacing: letterSpacing,
                   ),
@@ -774,7 +774,7 @@ class _MushafPageState extends State<MushafPage> {
         'بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ',
         style: TextStyle(
           fontSize: pageFontSize.sp,
-          fontFamily: "KFGQPC", // استخدام خط QCF_BSML للبسملة
+          fontFamily: "KFGQPC", // Use QCF_BSML font for the Basmala
           color: primaryColor,
         ),
         textAlign: TextAlign.center,
@@ -791,11 +791,11 @@ class _MushafPageState extends State<MushafPage> {
       List<String> words = ayah['words'];
       bool hasAyahNumberInJson = ayah['hasAyahNumberInJson'] ?? false;
 
-      // إضافة كل كلمة كـ TextSpan منفصل مع فراغ بينها
+      // Add each word as a separate TextSpan with a space in between
       for (int i = 0; i < words.length; i++) {
         String word = words[i];
 
-        // إضافة الكلمة
+        // Add the word
         spans.add(
           TextSpan(
             text: word,
@@ -803,12 +803,12 @@ class _MushafPageState extends State<MushafPage> {
               backgroundColor: selectedWords.contains(word)
                   ? highlightColor.withOpacity(0.25)
                   : Colors.transparent,
-              // استخدام خط احتياطي إذا كان الخط المحدد غير متوفر
-              fontFamily: 'ScheherazadeNew', // خط احتياطي
+              // Use a fallback font if the specified font is not available
+              fontFamily: 'ScheherazadeNew', // Fallback font
             ),
             recognizer: TapGestureRecognizer()
               ..onTap = () {
-                // إذا كنا في وضع التحديد، أضف أو أزل الكلمة من القائمة
+                // If in selection mode, add or remove the word from the list
                 if (isSelectionMode) {
                   setState(() {
                     if (selectedWords.contains(word)) {
@@ -817,7 +817,7 @@ class _MushafPageState extends State<MushafPage> {
                       selectedWords.add(word);
                     }
 
-                    // إذا لم يعد هناك كلمات محددة، اخرج من وضع التحديد
+                    // If there are no more selected words, exit selection mode
                     if (selectedWords.isEmpty) {
                       isSelectionMode = false;
                     }
@@ -827,13 +827,13 @@ class _MushafPageState extends State<MushafPage> {
           ),
         );
 
-        // إضافة فراغ بعد كل كلمة إلا إذا كانت الكلمة الأخيرة في الآية
+        // Add a space after each word unless it's the last word in the ayah
         if (i < words.length - 1) {
           spans.add(TextSpan(text: ' '));
         }
       }
 
-      // إضافة رقم الآية في نهاية الآية فقط إذا لم يكن موجوداً في ملف JSON
+      // Add the ayah number at the end of the ayah only if it's not in the JSON file
       if (!hasAyahNumberInJson) {
         spans.add(TextSpan(text: ' \u06DD${_convertToArabicNumeral(ayahNumber)} '));
       }
@@ -878,7 +878,7 @@ class _MushafPageState extends State<MushafPage> {
               leading: const Icon(Icons.share),
               title: const Text('مشاركة الآية'),
               onTap: () {
-                // تنفيذ المشاركة
+                // Perform sharing
                 Navigator.pop(context);
               },
             ),
@@ -886,7 +886,7 @@ class _MushafPageState extends State<MushafPage> {
               leading: const Icon(Icons.bookmark),
               title: const Text('إضافة إشارة مرجعية'),
               onTap: () {
-                // إضافة إشارة مرجعية
+                // Add bookmark
                 Navigator.pop(context);
               },
             ),
@@ -896,4 +896,3 @@ class _MushafPageState extends State<MushafPage> {
     );
   }
 }
-
