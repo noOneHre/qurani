@@ -1,16 +1,26 @@
-# qurani
+# 📖 Qurani – Flutter Quran App
 
-A new Flutter project.
+**Qurani** is a Flutter application that displays Quran pages using Word-by-Word data from the Tarteel app.  
+Currently focused on accurate formatting and layout for individual Quranic words.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🚀 Current Features
 
-A few resources to get you started if this is your first Flutter project:
+- 📚 Display Mushaf pages in QCF-style
+- 🧠 Word-by-word highlighting (basic prototype)
+- 🔤 Based on Tarteel Word-by-Word dataset
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🛠 Planned Features (Coming Soon)
+....................
+....................
+
+---
+
+## 📦 Getting Started
+
+```bash
+flutter pub get
+flutter run
